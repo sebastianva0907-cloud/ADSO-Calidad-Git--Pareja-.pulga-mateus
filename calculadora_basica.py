@@ -1,14 +1,15 @@
-def calculadora_basica():
-    num1 = float(input("Ingrese el primer número: "))
-    num2 = float(input("Ingrese el segundo número: "))
 
-    print("Suma:", num1 + num2)
-    print("Resta:", num1 - num2)
-    print("Multiplicación:", num1 * num2)
+print("CALCULADORA BÁSICA")
+print("1. Sumar")
+print("2. Restar")
 
-    if num2 != 0:
-        print("División:", num1 / num2)
-    else:
-        print("No se puede dividir entre cero.")
+opcion = input("Elige una opción: ")
+a = float(input("Primer número: "))
+b = float(input("Segundo número: "))
 
-calculadora_basica()
+if opcion == "1":
+    print("Resultado:", a + b)
+elif opcion == "2":
+    print("Resultado:", a - b)
+else:
+    print("Opción no válida")
