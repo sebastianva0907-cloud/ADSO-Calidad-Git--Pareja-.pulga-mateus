@@ -1,38 +1,14 @@
-# modulo_calculadora.py - Código espagueti (NIVEL CALAMIDAD 🍝)
-import sys
+def calculadora_basica():
+    num1 = float(input("Ingrese el primer número: "))
+    num2 = float(input("Ingrese el segundo número: "))
 
-def main():
-    print("=== CALCULADORA SENA ===")
-    try:
-        a = float(input("Numero 1: "))
-        b = float(input("Numero 2: "))
-        op = input("Operacion (+,-,*,/): ")
-        if op == "+":
-            print("Resultado:", a + b)
-        elif op == "-":
-            print("Resultado:", a - b)
-        elif op == "*":
-            print("Resultado:", a * b)
-        elif op == "/":
-            if b == 0:
-                print("ERROR: Division por cero")
-                main()  # 🍝 llamada recursiva como "goto"
-            else:
-                print("Resultado:", a / b)
-        else:
-            print("Operacion no valida")
-            main()  # 🍝 otra vez goto disfrazado
-    except ValueError:
-        print("ERROR: debe ingresar numeros")
-        main()  # 🍝 y otra...
+    print("Suma:", num1 + num2)
+    print("Resta:", num1 - num2)
+    print("Multiplicación:", num1 * num2)
 
-    fin = input("Otra operacion? (s/n): ")
-    if fin == "s":
-        main()  # 🍝 ciclo infinito recursivo que revienta la pila
-    elif fin == "n":
-        sys.exit()
+    if num2 != 0:
+        print("División:", num1 / num2)
     else:
-        print("Opcion invalida, cerrando...")
-        sys.exit()
+        print("No se puede dividir entre cero.")
 
-main()  # 🍝 ejecucion directa sin if __name__ == '__main__'
+calculadora_basica()
