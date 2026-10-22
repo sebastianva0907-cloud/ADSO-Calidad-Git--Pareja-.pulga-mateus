@@ -1,4 +1,3 @@
-
 print("CALCULADORA BÁSICA")
 print("1. Sumar")
 print("2. Restar")
@@ -8,8 +7,8 @@ a = float(input("Primer número: "))
 b = float(input("Segundo número: "))
 
 if opcion == "1":
-    print("Resultado:", a + b)
+    print("La suma es:", a + b)
 elif opcion == "2":
-    print("Resultado:", a - b)
+    print("La resta es:", a - b)
 else:
-    print("Opción no válida")
+    print("Opción incorrecta")
