@@ -1,15 +1,19 @@
 
 print("CALCULADORA BÁSICA")
-print("1. Sumar")
-print("2. Restar")
+print("1. Multiplicar")
+print("2. Dividir")
 
 opcion = input("Elige una opción: ")
+
 a = float(input("Primer número: "))
 b = float(input("Segundo número: "))
 
 if opcion == "1":
-    print("La suma total es:", a + b)
+    print("El resultado de la multiplicación es:", a * b)
 elif opcion == "2":
-    print("La resta es:", a - b)
+    if b != 0:
+        print("El resultado de la división es:", a / b)
+    else:
+        print("Error: no se puede dividir entre cero")
 else:
-    print("Opción incorrecta")
+    print("Opción no válida")
