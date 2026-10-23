@@ -1,19 +1,22 @@
 
 print("CALCULADORA BÁSICA")
-print("1. Multiplicar")
-print("2. Dividir")
+print("1. Potencia")
+print("2. Raíz cuadrada")
 
 opcion = input("Elige una opción: ")
 
-a = float(input("Primer número: "))
-b = float(input("Segundo número: "))
-
 if opcion == "1":
-    print("El resultado de la multiplicación es:", a * b)
+    base = float(input("Ingresa la base: "))
+    exponente = float(input("Ingresa el exponente: "))
+    print("Resultado:", base ** exponente)
+
 elif opcion == "2":
-    if b != 0:
-        print("El resultado de la división es:", a / b)
+    numero = float(input("Ingresa un número: "))
+
+    if numero >= 0:
+        print("Resultado:", numero ** 0.5)
     else:
-        print("Error: no se puede dividir entre cero")
+        print("No se puede calcular la raíz real de un número negativo")
+
 else:
     print("Opción no válida")
